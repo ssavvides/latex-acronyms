@@ -1,0 +1,42 @@
+\documentclass{article}
+\usepackage{acro}
+\usepackage{hyperref}
+\usepackage{url}
+
+\include{acronyms}
+
+\begin{document}
+\title{A personal collection of acronyms using \\ the ``acro'' package}
+\author{Savvas Savvides}
+\maketitle
+
+\section{How to use}
+All acronyms are defined in a file called ``acronyms.tex''. This document shows the most common commands of the acro package. For more information please refer to the official documentation of the Acro package~\cite{acro}.
+
+Make sure you include the file containing the acronyms using the command: \verb=\include{acronyms}=. The most commonly used commands of are:
+\begin{description}
+  \item{\verb=\acresetall=}
+    Resets all acronyms.
+  \item{\verb=\ac{}=}
+    The most common command. The first occurrence prints the full acronym and its abbreviation in parentheses and all subsequent occurrences only print the abbreviation.
+  \item{\verb=\acp{}=}
+    Same as \verb=\ac{}= but makes abbreviation plural.
+  \item{\verb=\acf{}=}
+    Same as first occurrence of \verb=\ac{}=.
+  \item{\verb=\acl{}=}
+    The long form of the acronym.
+\end{description}
+
+
+\section{Example}
+\begin{itemize}
+    \item \verb=\ac{PRF}= first occurrence: \ac{PRF}
+    \item \verb=\ac{PRF}= second occurrence: \ac{PRF}
+    \item \verb=\acp{PRF}=: \acp{PRF}
+    \item \verb=\acl{PRF}=: \acl{PRF}
+    \item \verb=\acf{PRF}=: \acf{PRF}
+\end{itemize}
+
+\bibliographystyle{abbrv}
+\bibliography{main}
+\end{document}
